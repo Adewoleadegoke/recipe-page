@@ -57,11 +57,22 @@ span {
 
 table {
     width: 100%;
-    margin-top: 0;
+    margin-top: 20px;
+    border-collapse: collapse;
 }
 
-td {
+table td {
     color: hsl(30, 10%, 34%);
+    padding: 14px 0;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+.attribution {
+    visibility: hidden;
 }
 
 .bold {
@@ -112,4 +123,39 @@ td {
     line-height: 1.5;
     position: relative;
     right: 20px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    body {
+        background: hsl(30, 54%, 90%);
+        margin-top: 70px;
+    }
+    
+    main {
+        width: 50%;
+        margin: auto;
+        border-radius: 10px;
+        padding: 25px;
+    }
+    
+    .main-component {
+        padding: 0;
+    }
+    
+    .omelette-img {
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    main {
+        padding: 30px;
+        width: 510px;
+        border-radius: 15px;
+    }
+    
+    .omelette-img {
+        height: 200px;
+    }
 }
